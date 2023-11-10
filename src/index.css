@@ -1,0 +1,14 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: 'Cairo', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,button,select,textarea,select2,textarea2,textarea3,textarea{
+    font-family: 'Cairo', sans-serif;
+}
