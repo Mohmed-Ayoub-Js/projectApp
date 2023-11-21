@@ -2,10 +2,11 @@ import React  , {useState }from 'react'
 import {Card, CardBody} from "@nextui-org/react";
 import {Button} from "@nextui-org/react";
 import {Input} from "@nextui-org/react";
+import CardApp from './Card';
 const Add = () => {
     const [tasks, setTasks] = useState([]);
     const [currentTask, setCurrentTask] = useState('');
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(null);
     const [errorMessage, setErrorMessage] = useState("");
     let numericCount = parseInt(count);
     const addTask = () => {
@@ -41,11 +42,11 @@ const Add = () => {
     };
   
   return (
-    <div>
+    <div className='flex flex-col'>
         <p className='font-bold text-red-500 flex justify-center items-center flex-col text-2xl'>{errorMessage}</p>
       <div className='flex justify-center items-center flex-col gap-4'>
-      <Input type="text" label="الذكر" onChange={(e) => setCurrentTask(e.target.value)} />
-      <Input type="text" label="التكرار" onChange={(e) => setCount(e.target.value)} />
+      <Input type="text" label="الذكر" value={currentTask}  onChange={(e) => setCurrentTask(e.target.value)} />
+      <Input type="text" label="التكرار" value={count}  onChange={(e) => setCount(e.target.value)} />
         <Button color="success" onClick={addTask}>
         اضافة
       </Button>  
@@ -72,6 +73,10 @@ const Add = () => {
         ))}
       </ul>
       </ul>
+      <div className='m-5'>
+      <CardApp />
+
+      </div>
     </div>
     )
 }

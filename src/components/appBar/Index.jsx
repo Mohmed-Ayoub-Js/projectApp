@@ -14,7 +14,7 @@ const Appbar = () => {
        {
         href:'/about',
         link:"عن التطبيق"
-       }
+       },
       ];
 
       const handelClick = () => {

@@ -1,10 +1,11 @@
 import React from 'react'
-import Add from '../../components/add/Index'
 import Appbar from '../../components/appBar/Index'
+import Adkar from '../../components/Adkar/Index';
+import Add from '../../components/add/Index';
 const Home = () => {
   return (
     <div className='flex flex-col'>
-            <Appbar />
+      <Appbar />
       <Add />
     </div>
   )
